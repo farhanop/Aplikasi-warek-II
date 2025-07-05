@@ -1,0 +1,20 @@
+/* frontend/src/index.css */
+
+/* Impor direktif dasar Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definisi kelas utilitas kustom untuk input fields */
+/* @apply digunakan untuk menggabungkan beberapa kelas Tailwind menjadi satu kelas kustom */
+.input-field {
+  @apply shadow appearance-none border rounded w-full py-2 px-3
+  text-gray-700 leading-tight focus:outline-none focus:ring focus:ring-blue-500 /* <-- DIUBAH DI SINI */
+  dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600
+  transition-colors duration-300 ease-in-out;
+}
+
+/* Transisi global untuk efek dark mode yang halus pada semua elemen */
+body {
+  @apply transition-colors duration-300 ease-in-out;
+}
